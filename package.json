@@ -1,0 +1,19 @@
+{
+	"name": "cypress1",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"test-headful": "npx cypress open",
+		"test-headless": "npx cypress run",
+		"test-mobile-headful": "$Env:VIEWPORT_DEVICE='mobile'; npx cypress open",
+		"test-mobile-headless": "$Env:VIEWPORT_DEVICE='mobile'; npx cypress run"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^15.5.0"
+	}
+}

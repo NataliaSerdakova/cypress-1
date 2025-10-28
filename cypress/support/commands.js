@@ -10,14 +10,15 @@
 //
 //
 // -- This is a parent command --
- Cypress.Commands.add('login', (email, password) => {
- 	cy.contains('Log in').click();
- 	cy.get('#mail').type(email);
- 	if (password !== undefined && password !== null && password !== '') {
- 		cy.get('#pass').type(password);
- 	} else {}
- 	cy.contains('Submit').click();
- })
+Cypress.Commands.add('visitAndLogin', (email, password) => {
+  cy.visit('/');
+  cy.contains('Log in').click();
+  cy.get('#mail').type(email);
+  if (password !== undefined && password !== null && password !== '') {
+    cy.get('#pass').type(password);
+  }
+  cy.contains('Submit').click();
+});
 //
 //
 // -- This is a child command --
